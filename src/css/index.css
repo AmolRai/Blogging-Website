@@ -1,0 +1,524 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.register,
+.login {
+  width: 100%;
+  height: 100vh;
+  background-color: #ada2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 420px;
+  border-radius: 10px;
+}
+
+.form,
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3vh;
+  gap: 25px;
+  width: 100%;
+}
+
+.login-form input {
+  border-style: none;
+  border-bottom: 1px solid lightgray;
+  height: 30px;
+  font-size: 16px;
+  width: 290px;
+}
+
+.register input {
+  border-style: none;
+  border-bottom: 1px solid lightgray;
+  height: 30px;
+  font-size: 16px;
+  width: 290px;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid gray;
+}
+
+button {
+  width: 85%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #897af9;
+  color: white;
+  font-size: 16px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #897af9;
+}
+
+.logo h3 {
+  margin-top: 10px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-self: flex-start;
+  margin-left: 32px;
+}
+
+label img {
+  width: 35px;
+}
+
+.account {
+  color: #a397ff;
+}
+
+.register p a {
+  text-decoration: none;
+  margin-left: 3px;
+  color: #897af9;
+}
+
+/* login */
+.login-container {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 340px;
+  height: 380px;
+  border-radius: 10px;
+}
+
+.login .logo {
+  margin-top: 15px;
+}
+
+.login p a {
+  text-decoration: none;
+  margin-left: 3px;
+  color: #897af9;
+}
+
+/* HOME CSS */
+
+.home {
+  width: 100%;
+  height: 100vh;
+}
+
+.home .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+  top: 0;
+  position: sticky;
+}
+
+.home .nav .right img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: rgb(54, 53, 53);
+  margin-left: 25px;
+}
+
+.nav .left img {
+  width: 40px;
+}
+
+.nav .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-right: 10px;
+}
+
+.right button {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #6d5aff;
+  color: white;
+  font-size: 16px;
+}
+
+.right input {
+  width: 150px;
+  height: 16px;
+  border-style: none;
+  border-bottom: 1px solid lightgray;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.home .add-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #897af9;
+  font-size: 25px;
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+}
+
+/* middle container */
+
+.middle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12vh;
+}
+
+.middle-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.middle-top p {
+  width: 400px;
+  text-align: center;
+  color: #808080b8;
+}
+
+.middle-top h1 {
+  color: #6d5bff;
+  font-size: 45px;
+}
+
+.middle-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+  padding-bottom: 50px;
+}
+
+.middle-top input {
+  width: 250px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  height: 22px;
+  font-size: 18px;
+}
+
+.blog-card {
+  width: 400px;
+  height: 420px;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.nav-link h2 {
+  margin-top: 20px;
+  color: black;
+}
+
+.nav-link p {
+  margin-top: 10px;
+  color: rgb(170, 168, 168);
+}
+
+.button-group .btn-1,
+.btn-2 {
+  background-image: url("https://cdn-icons-png.flaticon.com/128/1828/1828270.png");
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  background-color: white;
+}
+
+.btn-2 {
+  background-image: url("https://cdn-icons-png.flaticon.com/128/6460/6460112.png");
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 1px;
+}
+
+/* Detail */
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin-top: 65px;
+  margin: 65px auto;
+  gap: 20px;
+}
+
+.detail h4 {
+  color: rgb(181, 176, 176);
+}
+
+.detail h1 {
+  font-size: 35px;
+}
+
+.detail p {
+  line-height: 35px;
+  letter-spacing: -0.003em;
+  font-size: 20px;
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times,
+    serif;
+  color: rgba(41, 41, 41, 1);
+}
+
+.detail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Create */
+
+.create form {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  align-items: flex-start;
+  justify-content: center;
+  width: 70vw;
+  margin: auto;
+  margin-top: -40px;
+}
+
+.create form input {
+  border: none;
+  font-size: 35px;
+  margin-top: 10vh;
+  font-family: "Times New Roman", Times, serif;
+  height: 50px;
+}
+
+::placeholder {
+  color: #b3b3b1;
+}
+
+.create form textarea {
+  border: none;
+  font-size: 24px;
+  font-family: "Times New Roman", Times, serif;
+  width: 60vw;
+  resize: none;
+  color: #303030;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+textarea:focus {
+  outline: 0;
+}
+
+.create form label {
+  margin-left: 5px;
+}
+
+/* create nav */
+.create-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 15px auto;
+}
+
+.create-nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.create-nav-left img {
+  width: 40px;
+}
+
+.create-nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.create-nav-right button {
+  padding: 7px 10px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.create-nav-right img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* detail nav */
+
+.detail-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -46px;
+  margin-bottom: 50px;
+}
+
+.detail-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-nav-left img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.detail-nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.detail-nav-right img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.detail-nav-left h3 {
+  color: black;
+}
+
+.home-elements-style {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: black;
+}
+
+.home-elements-style p {
+  margin-top: 10px;
+  color: rgb(170, 168, 168);
+}
+
+/* media query */
+@media (max-width: 768px) {
+  .middle-top {
+    margin-top: 50px;
+  }
+}
+
+/* Spinner CSS */
+.spinner {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  border-top-color: rgb(77, 77, 77);
+  animation: spinner 0.8s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+.message {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
+  font-weight: bold;
+  color: rgb(52, 52, 52);
+}
