@@ -111,8 +111,9 @@ function Create() {
           style={{ display: "none" }}
           type="file"
           id="file"
+          accept="image/png, image/jpeg"
         ></input>
-        <label htmlFor="file">
+        <label htmlFor="file" style={{ cursor: "pointer" }}>
           <img src="https://cdn-icons-png.flaticon.com/512/5053/5053024.png"></img>
           Upload a image
         </label>

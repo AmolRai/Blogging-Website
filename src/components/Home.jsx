@@ -22,6 +22,7 @@ function Home() {
   const [showLoader, setShowLoader] = useState(false);
 
   async function getBlog() {
+    setShowLoader(true);
     const coll = collection(db, "blog");
     const blogDoc = await getDocs(coll);
     setBlogArray(
@@ -29,6 +30,12 @@ function Home() {
         return { ...item.data(), id: item.id };
       })
     );
+    setSearchArray(
+      blogDoc.docs.map(function (item) {
+        return { ...item.data(), id: item.id };
+      })
+    );
+    setShowLoader(false);
   }
 
   function handleSignOut() {
@@ -60,40 +67,21 @@ function Home() {
   }
 
   async function handleSearch() {
-    const q = query(collection(db, "blog"), where("title", "==", userText));
-    try {
-      const querySnapshot = await getDocs(q);
-      setSearchArray(
-        querySnapshot.docs.map(function (item) {
-          return { ...item.data(), id: item.id };
-        })
-      );
-    } catch (error) {
-      alert(error.message);
-    }
+    const filteredBlog = blogArray.filter((blog) => {
+      return blog.title.toLowerCase().includes(userText.toLowerCase());
+    });
+    setSearchArray(filteredBlog);
   }
 
-  useEffect(
-    function () {
-      getBlog();
-    },
-    [userText.length]
-  );
+  useEffect(() => {
+    getBlog();
+  }, []);
 
   function handleKey(event) {
     if (event.code == "Enter") {
       handleSearch();
-      setBlogArray(searchArray);
     }
   }
-
-  useEffect(() => {
-    if (blogArray.length === 0) {
-      setShowLoader(true);
-    } else {
-      setShowLoader(false);
-    }
-  }, [blogArray]);
 
   return (
     <div className="home">
@@ -119,6 +107,9 @@ function Home() {
           <input
             onKeyDown={handleKey}
             onChange={function (event) {
+              if (event.target.value === "") {
+                setSearchArray(blogArray);
+              }
               setUserText(event.target.value);
             }}
             placeholder="Search"
@@ -126,7 +117,8 @@ function Home() {
         </div>
 
         <div className="middle-bottom">
-          {blogArray.map(function (obj) {
+          {searchArray.length === 0 && !showLoader && <h1>Not Found</h1>}
+          {searchArray.map(function (obj) {
             return (
               <div className="blog-card" key={obj.id}>
                 <NavLink
@@ -147,13 +139,13 @@ function Home() {
                       to="create"
                       state={{ data: obj }}
                     >
-                      {user.uid === obj.customId && (
+                      {/* {user.uid === obj.customId && (
                         <button
                           className="btn-1"
                           onClick={() => handleEdit(obj.id)}
                           style={{ marginLeft: "1rem" }}
                         ></button>
-                      )}
+                      )} */}
                     </NavLink>
                     {user.uid === obj.customId && (
                       <button
